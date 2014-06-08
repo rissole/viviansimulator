@@ -4,10 +4,16 @@
 Happy Birthday, Vivian.
 
 xoxo,
+
 Blake and Alex
 
 ## Oh my god what is this
 Most of the time when we see Vivian's laptop screen, it's got an episode of Bones playing, 2048 in the background(?), another distracting window or two, and then finally whatever Vivian's working on.
+
+
+
+
+You too can experience this.
 
 ## How to play
 1. Type as fast as you can. Seriously. That's how you start the game.
