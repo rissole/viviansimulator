@@ -39,9 +39,9 @@ Game.prototype.initMainScreenDOM = function() {
 Game.prototype.startTimer = function() {
     //WTF COUNTdown js is the worst thing ever, i cant believe this is used in a production environment, wait i can.
     var self = this;
-    var timerId = countdown((new Date()).getTime()+this.TIMELIMIT, function(ts) {
+    this.timerId = countdown((new Date()).getTime()+this.TIMELIMIT, function(ts) {
             if (ts.minutes == 0 && ts.seconds == 0) {
-                window.clearInterval(timerId);
+                window.clearInterval(self.timerId);
                 game.progress();
             }
             var seconds = ts.seconds;
@@ -56,6 +56,7 @@ Game.prototype.startTimer = function() {
 Game.prototype.progress = function() {
     // screen2 -> screen3
     if (this.$screenMain.is(":visible")) {
+        window.clearInterval(this.timerId);
         this.calculate2048Score();
         this.calculatePaperScore();
         this.initVideoQuizDOM();
