@@ -1,4 +1,88 @@
-// Make arrow key events send to 2048 frame
+
+var times = [];
+var differences = [];
+var WINDOW_LENGTH = 50;
+
+
+//Initialise the differences array to big values, so we aren't typing furiously yet.
+for (var i = 0; i < WINDOW_LENGTH; i++) {
+    differences[i] = 1000.0;
+}
+// Time in ms between keystrokes which we think is fast.
+// (50ms)
+var TIME_BETWEEN_KEYSTROKES = 50;
+
+// add an object with keycode and timestamp
+$(document).keyup(function(evt) {
+    if (checkFuriousness()) {
+        // If we've passed the test, stop recording keystrokes.
+        $(document).unbind('keyup');
+        window.setTimeout(showPage, 2000);
+    }
+
+    if (times.length != 0) {
+        differences.push(evt.timeStamp - times[times.length - 1] );
+    }
+    times.push(evt.timeStamp);
+});
+
+function mfwAverage(iterable) {
+    //mfw I have to write this myself
+    var sum = 0.0;
+    for (var i = 0; i < iterable.length; i++)
+    {
+        sum += iterable[i]; 
+    }
+    return sum / iterable.length;
+
+}
+function checkFuriousness() {
+    // Whether we are typing furiously enough.
+    // Furious if the average time between keystrokes over the last X keystrokes  is less than so much.
+
+    if (differences.length <= WINDOW_LENGTH) {
+        return false;
+    }
+
+    //The last few keystrokes
+    var time_window = differences.slice(-WINDOW_LENGTH);
+    var average = mfwAverage(time_window);
+
+    console.log(time_window);
+    console.log(average);
+    console.log("target:" + TIME_BETWEEN_KEYSTROKES );
+
+    var message = "";
+    if (average <= TIME_BETWEEN_KEYSTROKES) {
+        message = "I'm in!";
+    }
+    else if (average < 100) {
+        message = "It's 11:59:59 quick!";
+    }
+    else if (average < 250) {
+        message = "[typing intensifies]";
+    }
+    else if (average < 500) {
+        message = "Time to start this assignment!";
+    }
+    else if (average < 800) {
+        message = "Faster!";
+    }
+
+    if (message != "") {
+        $('#feedback').text(message);
+    }
+
+    return average < TIME_BETWEEN_KEYSTROKES ;
+}
+
+function showPage() {
+    $('div.vivsim').show();
+    $('div.prepare-gag').fadeOut(500);
+}
+
+// Make arrow key events send to 2048 frame 
+// >security
 document.addEventListener("keydown", function(event) {
     // if it's an arrow key
     if (event.which >= 37 && event.which <= 40) {
@@ -6,3 +90,6 @@ document.addEventListener("keydown", function(event) {
         frame_2048.contentDocument.dispatchEvent(new CustomEvent("keydown", {detail: {event: event}}))
     }
 });
+
+
+

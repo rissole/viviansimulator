@@ -1,0 +1,38 @@
+
+.prepare-gag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: table;
+}
+
+.prepare-gag > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.prepare-gag h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "League Gothic";
+    font-weight: normal;
+    font-size: 6em;
+    padding-bottom: 1em;
+    margin: 0;
+}
+.black-background {
+    background-color: #111111;
+}
+.prepare-gag h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: "League Gothic";
+    font-weight: normal;
+    font-size: 3em;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
