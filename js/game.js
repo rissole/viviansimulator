@@ -42,6 +42,7 @@ Game.prototype.startTimer = function() {
     var timerId = countdown((new Date()).getTime()+this.TIMELIMIT, function(ts) {
             if (ts.minutes == 0 && ts.seconds == 0) {
                 window.clearInterval(timerId);
+                game.progress();
             }
             var seconds = ts.seconds;
             // WOW back to first year for me
