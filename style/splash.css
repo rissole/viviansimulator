@@ -25,7 +25,9 @@
     margin: 0;
 }
 .black-background {
-    background-color: #111111;
+    color: #111111;
+    background-image: url("../bg.jpg");
+    opacity: 0.3;
 }
 .prepare-gag h2 {
     color: #FFF;
