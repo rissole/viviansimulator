@@ -59,8 +59,8 @@
 body {
   padding: 0;
   margin: 0;
-  background: url(http://s.cdpn.io/3/dark_wall_@2X.png);
-  background-size: 300px 300px;
+  background-image: url("../bg.jpg");
+  background-attachment: fixed;
 }
 
 h1 {

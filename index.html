@@ -18,9 +18,7 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="prepare-gag black-background screen1">
-        <!-- HACK OF THE YEAR 2014 -->
-        <h1></h1>
+    <div class="black-background">
     </div>
     <div class="prepare-gag screen1">
         <h1>Vivian Simulator 2014</h1> 
@@ -66,38 +64,19 @@
     <div class="videoquestions screen3" style="display: none">
         <form class="pure-form">
             <h1>Well done! Now how about that video...</h1>
-            <p>The video you watched was a promo for Fox's smash hit series Bones.</p>
-            <h3>What season was the episode from this promo in?</h3>
-            <label for="a1-1" class="pure-radio">
-                <input id="a1-1" type="radio" name="a1" value="a1-1" checked>
-                5
-            </label>
-            <label for="a1-2" class="pure-radio">
-                <input id="a1-2" type="radio" name="a1" value="a1-2">
-                6
-            </label>
-            
-            <h3>What season was the episode from this promo in?</h3>
-            <label for="a2-1" class="pure-radio">
-                <input id="a2-1" type="radio" name="a2" value="a2-1" checked>
-                5
-            </label>
-            <label for="a2-2" class="pure-radio">
-                <input id="a2-2" type="radio" name="a2" value="a2-2">
-                6
-            </label>
-            <div style="text-align:center">
-                <button type="button" class="pure-button pure-input-1-2 pure-button-primary">All right, show me how I went.</button>
-            </div>
+            <p>The video you watched was <span id="video_desc"></span></p>
         </form>
+        <div style="text-align:center">
+            <button type="button" class="pure-button pure-input-1-2 pure-button-primary">All right, show me how I went.</button>
+        </div>
     </div>
     
     <div class="share-it screen4" style="display: none">
         <div class="sim-scores">
-            <div class="sim-scores-2048">2048: 9001</div>
-            <div class="sim-scores-paper">Paper: 9001</div>
-            <div class="sim-scores-video">Video: 9001</div>
-            <div class="sim-scores-total"><h1 class="total">Total: 90001</h1></div>
+            <div class="sim-scores-2048">2048: <span class="score">9001</span></div>
+            <div class="sim-scores-paper">Paper: <span class="score">9001</span></div>
+            <div class="sim-scores-video">Video: <span class="score">9001</span></div>
+            <div class="sim-scores-total"><h1 class="total">Total: <span class="score">9001</span></h1></div>
         </div>
         <h1 class="center">Woah, nice score. You should tell people about it!</h1>
         <div class="center">
