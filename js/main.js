@@ -24,6 +24,9 @@ $(document).keyup(function(evt) {
         differences.push(evt.timeStamp - times[times.length - 1] );
     }
     times.push(evt.timeStamp);
+
+    //Only keep the last few times, ring buffer style.
+    times = times.slice(-WINDOW_LENGTH);
 });
 
 function mfwAverage(iterable) {
@@ -45,8 +48,10 @@ function checkFuriousness() {
     }
 
     //The last few keystrokes
-    var time_window = differences.slice(-WINDOW_LENGTH);
-    var average = mfwAverage(time_window);
+    //var time_window = differences.slice(-WINDOW_LENGTH);
+    differences = differences.slice(-WINDOW_LENGTH);
+    console.log(differences);
+    var average = mfwAverage(differences);
 
     var message = "";
     if (average <= TIME_BETWEEN_KEYSTROKES) {

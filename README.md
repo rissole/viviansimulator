@@ -11,7 +11,7 @@ Most of the time when we see Vivian's laptop screen, it's got an episode of Bone
 
 ## How to play
 1. Type as fast as you can. Seriously. That's how you start the game.
-2. Read the paper, answer the questions about it, get the highest 2048 score you can, and for goodness sake pay attention to the video, there's a quiz at the end.
+2. Read the paper, answer the questions about it, get the highest 2048 score you can, and for goodness' sake pay attention to the video, there's a quiz at the end.
 
 ###To-do list
 ~~Apologise to Vivian~~
