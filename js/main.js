@@ -9,10 +9,15 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+//WTF COUNTdown js is the worst thing ever, i cant believe this is used in a production environment, wait i can.
 var timerId = countdown((new Date()).getTime()+TIMELIMIT, function(ts) {
-        var seconds = ts.seconds;
-        if (seconds < 10) {
-            seconds = '0'+seconds.toString();
+        if (ts.minutes == 0 && ts.seconds == 0) {
+            window.clearInterval(timerId);
         }
-        document.getElementById('countdown').innerHTML = ts.minutes + ':'+ seconds;
-    }, countdown.MINUTES|countdown.SECONDS);
+        var seconds = ts.seconds;
+        // WOW back to first year for me
+        if (seconds < 10) {
+            seconds = '0' + seconds.toString();
+        }
+        document.getElementById('countdown').innerHTML = ts.minutes + ':' + seconds;
+}, countdown.MINUTES | countdown.SECONDS);
