@@ -1,0 +1,29 @@
+
+
+Sun Jun  8 20:42:26 2014
+Command line: TestDisk
+
+TestDisk 6.13, Data Recovery Utility, November 2011
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 3.8.0-25-generic (#37-Ubuntu SMP Thu Jun 6 20:47:07 UTC 2013) x86_64
+Compiler: GCC 4.7
+Compilation date: 2013-02-16T06:51:40
+ext2fs lib: 1.42.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       62533296 sectors
+/dev/sda: user_max   62533296 sectors
+/dev/sda: native_max 62533296 sectors
+/dev/sda: dco        62533296 sectors
+/dev/sdb: LBA, HPA, LBA48, DCO support
+/dev/sdb: size       976773168 sectors
+/dev/sdb: user_max   976773168 sectors
+/dev/sdb: native_max 976773168 sectors
+/dev/sdb: dco        976773168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - CHS 1 1 1, sector size=512
+Hard disk list
+Disk /dev/sda - 32 GB / 29 GiB - CHS 3892 255 63, sector size=512 - SAMSUNG MZMPC032HBCD-000L1, S/N:S0Y2NSAC462226, FW:CXM12L1Q
+Disk /dev/sdb - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - HITACHI HTS545050A7E380, S/N:TE95123RG7K43X, FW:GG2ZB6C0
+
+
+TestDisk exited normally.
