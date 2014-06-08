@@ -91,3 +91,54 @@ programmers anymore. we are deliverers */
     z-index: 10;
     pointer-events: none;
 }
+
+.videoquestions, .share-it {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em auto;
+    width: 50%;
+}
+
+.videoquestions h1, .share-it h1 {
+    color: black;
+}
+
+.sim-scores {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sim-scores > div {
+    padding: 0.5em 1em; 
+}
+
+.sim-scores-2048 {
+    border-radius: 10px 10px 0 0;
+    background-color: lime;
+}
+
+.sim-scores-paper {
+    background-color: red;
+}
+
+.sim-scores-video {
+    background-color: yellow;
+}
+
+.sim-scores-total {
+    border-radius: 0 0 10px 10px;
+    background-color: aqua;
+}
+
+.sim-scores .total {
+    margin: 0;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
