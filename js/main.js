@@ -2,7 +2,25 @@
 var times = [];
 var differences = [];
 var WINDOW_LENGTH = 50;
+INITIAL_FEEDBACK = "Type furiously to begin";
+SERIOUSLY = "No, seriously. Start typing."
 
+$feedback = $('#feedback');
+$feedback.text(INITIAL_FEEDBACK);
+
+setTimeout(function() {
+    if ($feedback.text() == INITIAL_FEEDBACK) {
+        $feedback.trigger('click');
+    }
+}, 10000);
+
+$feedback.on('click', function() {
+    if ($feedback.text() != SERIOUSLY) {
+        $feedback.fadeOut(function() {
+            $feedback.text(SERIOUSLY).fadeIn();
+        });
+    }
+});
 
 //Initialise the differences array to big values, so we aren't typing furiously yet.
 for (var i = 0; i < WINDOW_LENGTH; i++) {
@@ -24,6 +42,9 @@ $(document).keyup(function(evt) {
         differences.push(evt.timeStamp - times[times.length - 1] );
     }
     times.push(evt.timeStamp);
+
+    //Only keep the last few times, ring buffer style.
+    times = times.slice(-WINDOW_LENGTH);
 });
 
 function mfwAverage(iterable) {
@@ -45,8 +66,9 @@ function checkFuriousness() {
     }
 
     //The last few keystrokes
-    var time_window = differences.slice(-WINDOW_LENGTH);
-    var average = mfwAverage(time_window);
+    //var time_window = differences.slice(-WINDOW_LENGTH);
+    differences = differences.slice(-WINDOW_LENGTH);
+    var average = mfwAverage(differences);
 
     var message = "";
     if (average <= TIME_BETWEEN_KEYSTROKES) {
@@ -65,8 +87,11 @@ function checkFuriousness() {
         message = "Faster!";
     }
 
-    if (message != "") {
-        $('#feedback').text(message);
+    var $feedback = $('#feedback');
+    if (message != "" && $feedback.text() != message) {
+        $feedback.fadeOut(100, function() {
+            $feedback.text(message).fadeIn(100);
+        });
     }
 
     return average < TIME_BETWEEN_KEYSTROKES ;

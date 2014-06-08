@@ -10,6 +10,17 @@
     display: table;
 }
 
+.about {
+    z-index: 99999;
+    position: absolute;
+    display:block;
+    float: right;
+    bottom: 0;
+    right: 0;
+}
+.about a {
+    color: white;
+}
 .prepare-gag > * {
     display: table-cell;
     vertical-align: middle;
@@ -18,23 +29,30 @@
 .prepare-gag h1 {
     color: #FFF;
     text-align: center;
-    font-family: "League Gothic";
+    font-family: "Open Sans", sans-serif;
     font-weight: normal;
-    font-size: 6em;
+    font-size: 5em;
     padding-bottom: 1em;
     margin: 0;
 }
+
+.prepare-gag .title {
+    font-family: 'Lobster Two', cursive;
+    font-size: 7em;
+}
+
 .black-background {
     color: #111111;
     background-image: url("../bg.jpg");
     opacity: 0.3;
 }
+
 .prepare-gag h2 {
     color: #FFF;
     text-align: center;
-    font-family: "League Gothic";
+    font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 3em;
-    padding-bottom: 1em;
-    padding-top: 2em;
+    padding-bottom: 0em;
+    padding-top: 5em;
 }
