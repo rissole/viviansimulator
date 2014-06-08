@@ -10,6 +10,15 @@
     display: table;
 }
 
+.about {
+    z-index: 99999;
+    position: absolute;
+    display:block;
+    float: right;
+    bottom: 0;
+    right: 0;
+}
+
 .prepare-gag > * {
     display: table-cell;
     vertical-align: middle;
