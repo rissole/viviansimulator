@@ -18,7 +18,9 @@
     bottom: 0;
     right: 0;
 }
-
+.about a {
+    color: white;
+}
 .prepare-gag > * {
     display: table-cell;
     vertical-align: middle;
@@ -33,11 +35,13 @@
     padding-bottom: 1em;
     margin: 0;
 }
+
 .black-background {
     color: #111111;
     background-image: url("../bg.jpg");
     opacity: 0.3;
 }
+
 .prepare-gag h2 {
     color: #FFF;
     text-align: center;
