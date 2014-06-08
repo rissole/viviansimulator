@@ -27,9 +27,9 @@
 .prepare-gag h1 {
     color: #FFF;
     text-align: center;
-    font-family: "League Gothic";
+    font-family: "Open Sans", sans-serif;
     font-weight: normal;
-    font-size: 6em;
+    font-size: 5em;
     padding-bottom: 1em;
     margin: 0;
 }
@@ -41,9 +41,9 @@
 .prepare-gag h2 {
     color: #FFF;
     text-align: center;
-    font-family: "League Gothic";
+    font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 3em;
-    padding-bottom: 1em;
-    padding-top: 2em;
+    padding-bottom: 0em;
+    padding-top: 5em;
 }
