@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style/leaguegothic.css" />
 </head>
 <body>
-
     <div class="prepare-gag black-background">
         <h1> WELCOME TO VIVIAN SIMULATOR 2014 </h1> 
     </div>
@@ -16,7 +15,9 @@
         <h2 id="feedback"> Type furiously to begin </h2>
     </div>
 
-    <div class="vivsim" hidden>
+    <div class="vivsim" style="display: none;">
+        <div id="countdown">
+        </div>
         <div class="grid" style="height: 50%">
            <div class="col-1-2">
              <div class="module">
@@ -32,7 +33,7 @@
         <div class="grid" style="height: 50%">
            <div class="col-1-2">
              <div class="module">
-               <h3>QUESTIONS</h3>
+               <iframe class="grid-iframe" id="frame-questions" src="questionsframe.html" frameborder="0"></iframe>
              </div>
            </div>
            <div class="col-1-2">
@@ -40,9 +41,9 @@
                <iframe class="grid-iframe" id="frame-2048" src="2048frame.html"></iframe>
              </div>
            </div>
-       </div>
    </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/countdown.min.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
