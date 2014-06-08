@@ -1,3 +1,9 @@
+$(function() {
+    $.getJSON('js/questions.json', function(questionData) {
+        game = new Game(questionData);
+        game.initMainScreenDOM();
+    });
+});
 
 var times = [];
 var differences = [];
@@ -9,13 +15,11 @@ $feedback = $('#feedback');
 $feedback.text(INITIAL_FEEDBACK);
 
 setTimeout(function() {
-    if ($feedback.text() == INITIAL_FEEDBACK) {
-        $feedback.trigger('click');
-    }
+    $feedback.trigger('click');
 }, 10000);
 
 $(document).on('click', function() {
-    if ($feedback.text() != SERIOUSLY) {
+    if ($feedback.text() == INITIAL_FEEDBACK) {
         $feedback.fadeOut(function() {
             $feedback.text(SERIOUSLY).fadeIn();
         });
@@ -100,33 +104,5 @@ function checkFuriousness() {
 function showPage() {
     $('.screen2').show();
     $('.screen1').fadeOut(500);
-    startTimer();
-}
-
-var TIMELIMIT = 90 * 1000;
-
-// >security
-// Make arrow key events send to 2048 frame
-document.addEventListener("keydown", function(event) {
-    // if it's an arrow key
-    if (event.which >= 37 && event.which <= 40) {
-        var frame_2048 = document.getElementById("frame-2048");
-        frame_2048.contentDocument.dispatchEvent(new CustomEvent("keydown", {detail: {event: event}}))
-    }
-});
-
-
-function startTimer() {
-    //WTF COUNTdown js is the worst thing ever, i cant believe this is used in a production environment, wait i can.
-    var timerId = countdown((new Date()).getTime()+TIMELIMIT, function(ts) {
-            if (ts.minutes == 0 && ts.seconds == 0) {
-                window.clearInterval(timerId);
-            }
-            var seconds = ts.seconds;
-            // WOW back to first year for me
-            if (seconds < 10) {
-                seconds = '0' + seconds.toString();
-            }
-            document.getElementById('countdown').innerHTML = ts.minutes + ':' + seconds;
-    }, countdown.MINUTES | countdown.SECONDS);
+    game.startTimer();
 }

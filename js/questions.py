@@ -1,8 +1,8 @@
 questions = [
     {
         'video': '-icMszNp38w',
-        'video_desc': 'A promo for Fox\'s smash hit series Bones.',
-        'video_questions': [
+        'videoDesc': 'A promo for Fox\'s smash hit series Bones.',
+        'videoQuestions': [
             {
                 'question': 'What season was the episode from this promo in?',
                 'answers': [
@@ -50,7 +50,7 @@ questions = [
             },
         ],
         'paper': 'http://cs.nyu.edu/~dsontag/papers/AroraEtAl_icml13.pdf',
-        'paper_questions': [
+        'paperQuestions': [
             {
                 'question': 'Who is the primary author of the paper?',
                 'answer': 'sanjeev arora'
