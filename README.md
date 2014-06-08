@@ -13,7 +13,7 @@ Most of the time when we see Vivian's laptop screen, it's got an episode of Bone
 
 
 
-You too can experience this.
+You too can live this dream.
 
 ## How to play
 1. Type as fast as you can. Seriously. That's how you start the game.
@@ -22,3 +22,5 @@ You too can experience this.
 ###To-do list
 ~~Apologise to Vivian~~
 
+###Trivia
+The background image is Vivian's wallpaper (we think).
