@@ -5,6 +5,7 @@ function getRandomInt(min, max) {
 function Game(questionData) {
     this.questions = questionData;
     this.questionSet = this.questions[getRandomInt(0, this.questions.length-1)];
+    this.$splashFeedbackContainer = $('.feedback-container');
     this.$screenMain = $('.screen2');
     this.$screenVideoQuiz = $('.screen3');
     this.$screenShare = $('.screen4');
@@ -21,8 +22,7 @@ function Game(questionData) {
 }
 
 Game.prototype.initMainScreenDOM = function() {
-    // video
-    this.$frameVideo.attr('src', 'http://www.youtube.com/embed/' + this.questionSet.video);
+    // video done on transition, see Game.progress()
 
     // paper
     this.$framePaper.attr('src', this.questionSet.paper);
@@ -34,6 +34,14 @@ Game.prototype.initMainScreenDOM = function() {
     for (i in this.questionSet.paperQuestions) {
         this.$frameQuestions.find('fieldset').append(formatQuestion(i, this.questionSet.paperQuestions[i].question));
     }
+}
+
+Game.prototype.startVideo = function() {
+    this.$frameVideo.attr('src', 'http://www.youtube.com/embed/' + this.questionSet.video + '?autoplay=1');
+}
+
+Game.prototype.stopVideo = function() {
+    this.$frameVideo.attr('src', '');
 }
 
 Game.prototype.startTimer = function() {
@@ -54,12 +62,19 @@ Game.prototype.startTimer = function() {
 }
 
 Game.prototype.progress = function() {
+    // screen1 -> screen2
+    if (this.$splashFeedbackContainer.is(':visible')) {
+        this.$screenMain.show();
+        $('.screen1').fadeOut(500);
+        this.startTimer();
+        this.startVideo();
     // screen2 -> screen3
-    if (this.$screenMain.is(":visible")) {
+    } else if (this.$screenMain.is(":visible")) {
         window.clearInterval(this.timerId);
         this.calculate2048Score();
         this.calculatePaperScore();
         this.initVideoQuizDOM();
+        this.stopVideo();
         this.$screenMain.fadeOut(500);
         this.$screenVideoQuiz.fadeIn(500);
     // screen3 -> screen4

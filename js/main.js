@@ -102,7 +102,5 @@ function checkFuriousness() {
 }
 
 function showPage() {
-    $('.screen2').show();
-    $('.screen1').fadeOut(500);
-    game.startTimer();
+    game.progress();
 }
