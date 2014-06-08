@@ -4,6 +4,10 @@ var differences = [];
 var WINDOW_LENGTH = 50;
 
 
+$('#feedback').on('click', function() {
+    $(this).text("No, seriously. Start typing.");
+});
+
 //Initialise the differences array to big values, so we aren't typing furiously yet.
 for (var i = 0; i < WINDOW_LENGTH; i++) {
     differences[i] = 1000.0;
