@@ -5,6 +5,8 @@
   <link rel="stylesheet" type="text/css" href="style/main.css" />
 </head>
 <body>
+    <div id="countdown">
+    </div>
     <div class="grid" style="height: 50%">
        <div class="col-1-2">
          <div class="module">
@@ -20,7 +22,7 @@
     <div class="grid" style="height: 50%">
        <div class="col-1-2">
          <div class="module">
-           <h3>QUESTIONS</h3>
+           <iframe class="grid-iframe" id="frame-questions" src="questionsframe.html" frameborder="0"></iframe>
          </div>
        </div>
        <div class="col-1-2">
@@ -30,6 +32,7 @@
        </div>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/countdown.min.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
