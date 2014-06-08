@@ -10,22 +10,31 @@
   <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div class="prepare-gag black-background">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="prepare-gag black-background screen1">
         <!-- HACK OF THE YEAR 2014 -->
         <h1></h1>
     </div>
-    <div class="prepare-gag ">
-        <h1 class="title">Vivian Simulator 2014</h1> 
+    <div class="prepare-gag screen1">
+        <h1>Vivian Simulator 2014</h1> 
     </div>
 
-    <div class="prepare-gag">
+    <div class="feedback-container screen1">
         <h2 id="feedback"> Type furiously to begin </h2>
+        <h3 class="center"><u>Your mission</u>: Read the paper, answer the questions, get the highest 2048 score you can, and for goodness' sake pay attention to the video, there's a quiz at the end.</h3>
     </div>
 
     <div class="about">
         <a href="https://github.com/rissole/viviansimulator">Oh my god what is this.</a>
     </div>
-    <div class="vivsim" style="display: none;">
+    <div class="vivsim screen2" style="display: none;">
         <div id="countdown">
         </div>
         <div class="grid" style="height: 50%">
@@ -54,7 +63,7 @@
         </div>
     </div>
 
-    <div class="videoquestions" style="display: none">
+    <div class="videoquestions screen3" style="display: none">
         <form class="pure-form">
             <h1>Well done! Now how about that video...</h1>
             <p>The video you watched was a promo for Fox's smash hit series Bones.</p>
@@ -78,12 +87,12 @@
                 6
             </label>
             <div style="text-align:center">
-                <button type="button" class="pure-button pure-input-1-2 pure-button-primary">All right, let's give that a shot.</button>
+                <button type="button" class="pure-button pure-input-1-2 pure-button-primary">All right, show me how I went.</button>
             </div>
         </form>
     </div>
     
-    <div class="share-it" style="display: none">
+    <div class="share-it screen4" style="display: none">
         <div class="sim-scores">
             <div class="sim-scores-2048">2048: 9001</div>
             <div class="sim-scores-paper">Paper: 9001</div>
@@ -92,7 +101,14 @@
         </div>
         <h1 class="center">Woah, nice score. You should tell people about it!</h1>
         <div class="center">
-            <h3><a href="">Play again</a></h3>
+            <a href="" class="pure-button pure-button-primary">Play again</a></div>
+            <div class="center" style="margin: 1em 0">
+                <div style="top:-4px;display:inline" class="fb-like" data-href="http://viviansimulator2014.com" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div style="margin-top: 0.5em">
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=viviansimulator2014&text=I%20just%20scored%20%24score%20points%20in%20Vivian%20Simulator%202014!" class="twitter-hashtag-button" data-url="http://viviansimulator2014.com">Tweet #viviansimulator2014</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+            </div>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

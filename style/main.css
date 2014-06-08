@@ -117,20 +117,20 @@ programmers anymore. we are deliverers */
 
 .sim-scores-2048 {
     border-radius: 10px 10px 0 0;
-    background-color: lime;
+    background-color: #447BD4;
 }
 
 .sim-scores-paper {
-    background-color: red;
+    background-color: #7C71D8;
 }
 
 .sim-scores-video {
-    background-color: yellow;
+    background-color: #33CDC7;
 }
 
 .sim-scores-total {
     border-radius: 0 0 10px 10px;
-    background-color: aqua;
+    background-color: #FFBA40;
 }
 
 .sim-scores .total {
@@ -141,4 +141,9 @@ programmers anymore. we are deliverers */
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+a.pure-button-primary:hover {
+    color: white;
+    text-decoration: none;
 }

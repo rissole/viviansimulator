@@ -14,7 +14,7 @@ setTimeout(function() {
     }
 }, 10000);
 
-$feedback.on('click', function() {
+$(document).on('click', function() {
     if ($feedback.text() != SERIOUSLY) {
         $feedback.fadeOut(function() {
             $feedback.text(SERIOUSLY).fadeIn();
@@ -98,8 +98,8 @@ function checkFuriousness() {
 }
 
 function showPage() {
-    $('div.vivsim').show();
-    $('div.prepare-gag').fadeOut(500);
+    $('.screen2').show();
+    $('.screen1').fadeOut(500);
     startTimer();
 }
 

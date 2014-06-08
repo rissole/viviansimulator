@@ -29,30 +29,38 @@
 .prepare-gag h1 {
     color: #FFF;
     text-align: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Lobster Two', cursive;
     font-weight: normal;
-    font-size: 5em;
+    font-size: 7em;
     padding-bottom: 1em;
     margin: 0;
-}
-
-.prepare-gag .title {
-    font-family: 'Lobster Two', cursive;
-    font-size: 7em;
 }
 
 .black-background {
     color: #111111;
     background-image: url("../bg.jpg");
     opacity: 0.3;
+    z-index: 0;
 }
 
-.prepare-gag h2 {
+.feedback-container {
+    position: absolute;
+    top: 55%;
+}
+
+.feedback-container h2 {
     color: #FFF;
     text-align: center;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 3em;
-    padding-bottom: 0em;
-    padding-top: 5em;
+    text-align: center;
+    width: 100%;
+}
+
+.feedback-container h3 {
+  width:50%;
+  color: #DDD;
+  margin-top: 2em;
+  font-size: 1.5em;
 }
