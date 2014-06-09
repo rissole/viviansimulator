@@ -96,30 +96,30 @@ questions = [
                 ]
             },
             {
-                'question': 'What time did the episode air (American Central Time)?',
+                'question': 'Which actor plays the second Doctor we see in the video?',
                 'answers': [
-                    ['9pm', False],
-                    ['8pm', False],
-                    ['7pm', True],
-                    ['6pm', False],
+                    ['Jack Black', False],
+                    ['Tom Baker', True],
+                    ['Matt Smith', True],
+                    ['William Hartnell', False],
                 ]
             },
             {
-                'question': 'According to the promo, what has the serial killer never done before?',
+                'question': 'What is floating around Tom Baker in the video?',
                 'answers': [
-                    ['Be violent', False],
-                    ['Be untraceable', False],
-                    ['Rip out the victim\'s nails', True],
-                    ['Leave a calling card', False],
+                    ['Jelly beans', False],
+                    ['Jelly Babies', True],
+                    ['Confetti', False],
+                    ['Paper', False],
                 ]
             },
             {
-                'question': 'How many people were sitting around the campfire where the body fell?',
+                'question': 'How many Ood were in the video altogether?',
                 'answers': [
-                    ['5', False],
-                    ['4', True],
-                    ['3', False],
+                    ['1', True],
                     ['2', False],
+                    ['3', False],
+                    ['4', False],
                 ]
             },
         ],
@@ -127,23 +127,23 @@ questions = [
         'paperQuestions': [
             {
                 'question': 'Who is the primary author of the paper?',
-                'answer': 'sanjeev arora'
+                'answer': 'satoshi nakamoto'
             },
             {
-                'question': 'Up to this point, most approaches to topic model learning been based on a(n)...?',
-                'answer': 'maximum likelihood objective'
+                'question': 'The collection of all Bitcoin transactions is called the Block _______',
+                'answer': 'chain'
             },
             {
-                'question': 'Posterior inference over document-topic and topic-word distributions is NP-hard. (true/false)',
-                'answer': 'true'
+                'question': 'What is the name of the mechanism used to save disk space?',
+                'answer': 'merkle tree'
             },
             {
-                'question': 'A word that appears in one topic and no others is called a(n)...?',
-                'answer': 'anchor word'
+                'question': 'The hash of the next block appears in each block. (true/false)',
+                'answer': 'false'
             },
             {
-                'question': 'What was the mean document length for the articles from The New York Times?',
-                'answer': '298'
+                'question': 'How many MB per year does the author propose that the block chain will grow?',
+                'answer': '4.2'
             },
         ]
     }
