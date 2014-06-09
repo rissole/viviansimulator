@@ -81,6 +81,7 @@ Game.prototype.progress = function() {
     } else if (this.$screenVideoQuiz.is(":visible")) {
         this.calculateVideoScore();
         this.initShareDOM();
+        this.animateScores();
         this.$screenVideoQuiz.fadeOut(500);
         this.$screenShare.fadeIn(500);
     }
@@ -113,11 +114,21 @@ Game.prototype.initShareDOM = function() {
     $('#tweet-container').append(twitterElement);
     twttr.widgets.load();
 
+    // scores done on transition, see Game.animateScores()
+}
+
+Game.prototype.animateScores = function() {
     // show scores
-    $('.sim-scores-2048 .score').text(this.score2048);
-    $('.sim-scores-paper .score').text(this.scorePaper);
-    $('.sim-scores-video .score').text(this.scoreVideo);
-    $('.sim-scores-total .score').text(this.getTotalScore());
+    $('.sim-scores-2048 .score').text(this.score2048)
+    $('.sim-scores-paper .score').text(this.scorePaper)
+    $('.sim-scores-video .score').text(this.scoreVideo)
+    $('.sim-scores-total .score').text(this.getTotalScore())
+
+    $('.sim-scores-2048').hide().delay(1500).slideDown();
+    $('.sim-scores-paper').hide().delay(3500).slideDown();
+    $('.sim-scores-video').hide().delay(5500).slideDown();
+    $('.sim-scores-total').hide().delay(7500).slideDown(1000);
+    $('div.share').hide().delay(7500).slideDown(1000);
 }
 
 Game.prototype.calculate2048Score = function() {
