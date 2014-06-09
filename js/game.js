@@ -113,6 +113,9 @@ Game.prototype.initShareDOM = function() {
     .replace('$SCORE$', this.getTotalScore());
     $('#tweet-container').append(twitterElement);
     twttr.widgets.load();
+    var fbElement = '<div style="top:-4px;display:inline" class="fb-like" data-href="http://vivians.im" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>'
+    $('#fb-container').prepend(fbElement);
+    FB.XFBML.parse();
 
     // scores done on transition, see Game.animateScores()
 }
