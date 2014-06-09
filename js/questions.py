@@ -100,7 +100,7 @@ questions = [
                 'answers': [
                     ['Jack Black', False],
                     ['Tom Baker', True],
-                    ['Matt Smith', True],
+                    ['Matt Smith', False],
                     ['William Hartnell', False],
                 ]
             },
