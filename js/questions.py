@@ -78,21 +78,21 @@ questions = [
         'videoDesc': 'A promo for Doctor Who.',
         'videoQuestions': [
             {
-                'question': 'What season was the episode from this promo in?',
+                'question': 'How long as the Doctor been running through and space for?',
                 'answers': [
-                    ['3', False],
-                    ['4', False],
-                    ['5', False],
-                    ['6', True],
+                    ['Over 80 years', False],
+                    ['Over 800 years', False],
+                    ['Over 900 years', True],
+                    ['Over 9000 years', False],
                 ]
             },
             {
-                'question': 'What is the name of the serial killer for the episode?',
+                'question': 'Which best describes the first human seen in the promo?',
                 'answers': [
-                    ['Ghost Assassin', False],
-                    ['Ghost Killer', True],
-                    ['Phantom Renegade', False],
-                    ['Phantom Killer', False],
+                    ['Policeman', True],
+                    ['Scientist', False],
+                    ['The Doctor', False],
+                    ['Medical doctor', False],
                 ]
             },
             {
