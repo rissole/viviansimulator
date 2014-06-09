@@ -123,7 +123,7 @@ questions = [
                 ]
             },
         ],
-        'paper': 'http://cs.nyu.edu/~dsontag/papers/AroraEtAl_icml13.pdf',
+        'paper': 'https://bitcoin.org/bitcoin.pdf',
         'paperQuestions': [
             {
                 'question': 'Who is the primary author of the paper?',
