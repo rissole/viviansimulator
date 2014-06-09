@@ -1,7 +1,10 @@
+game = null;
 $(function() {
     $.getJSON('js/questions.json', function(questionData) {
-        game = new Game(questionData);
-        game.initMainScreenDOM();
+        $('#frame-questions').load(function() {
+            game = new Game(questionData);
+            game.initMainScreenDOM();
+        });
     });
 });
 
@@ -75,7 +78,7 @@ function checkFuriousness() {
     var average = mfwAverage(differences);
 
     var message = "";
-    if (average <= TIME_BETWEEN_KEYSTROKES) {
+    if (average <= TIME_BETWEEN_KEYSTROKES && game != null) {
         message = "I'm in!";
     }
     else if (average < 100) {
@@ -98,7 +101,7 @@ function checkFuriousness() {
         });
     }
 
-    return average < TIME_BETWEEN_KEYSTROKES ;
+    return average < TIME_BETWEEN_KEYSTROKES && game != null;
 }
 
 function showPage() {
