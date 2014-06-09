@@ -1,10 +1,15 @@
 game = null;
 $(function() {
     $.getJSON('js/questions.json', function(questionData) {
-        $('#frame-questions').load(function() {
-            game = new Game(questionData);
-            game.initMainScreenDOM();
-        });
+        var createGame = function() {
+            if (document.getElementById('frame-questions').contentDocument.readyState == 'complete') {
+                game = new Game(questionData);
+                game.initMainScreenDOM();
+            } else {
+                setTimeout(createGame, 500);
+            }
+        };
+        createGame();
     });
 });
 
