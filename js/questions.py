@@ -1,7 +1,7 @@
 questions = [
     {
         'video': '-icMszNp38w',
-        'videoDesc': 'A promo for Fox\'s smash hit series Bones.',
+        'videoDesc': 'a promo for Fox\'s smash hit series Bones.',
         'videoQuestions': [
             {
                 'question': 'What season was the episode from this promo in?',
@@ -75,7 +75,7 @@ questions = [
     },
     {
         'video': '7hRy2N2CMhQ',
-        'videoDesc': 'A promo for Doctor Who.',
+        'videoDesc': 'a promo for Doctor Who.',
         'videoQuestions': [
             {
                 'question': 'How long as the Doctor been running through and space for?',
@@ -144,6 +144,80 @@ questions = [
             {
                 'question': 'How many MB per year does the author propose that the block chain will grow?',
                 'answer': '4.2'
+            },
+        ]
+    },
+    {
+        'video': 'D41h6apb-PY',
+        'videoDesc': 'a promo for HBO\'s Game of Thrones.',
+        'videoQuestions': [
+            {
+                'question': 'What is the name of the first character mentioned?',
+                'answers': [
+                    ['Theon', True],
+                    ['Tyrion', False],
+                    ['Tywin', False],
+                    ['Stannis', False],
+                ]
+            },
+            {
+                'question': 'How many dragons are seen in the promo?',
+                'answers': [
+                    ['1', True],
+                    ['2', False],
+                    ['3', False],
+                    ['0', False],
+                ]
+            },
+            {
+                'question': 'When the Red Viper says "Everybody is interested in something...", who is he talking to?',
+                'answers': [
+                    ['Tywin', False],
+                    ['The Spider', True],
+                    ['Grand Maester Pycelle', False],
+                    ['The Iron Bank', False],
+                ]
+            },
+            {
+                'question': 'What is Tywin eating when he exclaims "He killed his King!"?',
+                'answers': [
+                    ['Meat', False],
+                    ['Lemon cakes', False],
+                    ['No food, only wine', False],
+                    ['Fruit', True],
+                ]
+            },
+            {
+                'question': 'How many men are wielding swords behind Ramsey?',
+                'answers': [
+                    ['1', True],
+                    ['2', False],
+                    ['3', False],
+                    ['4', False],
+                ]
+            },
+        ],
+        'paper': 'http://bioinfo.cs.rice.edu/sites/bioinfo.cs.rice.edu/files/ParkNakhleh.pdf',
+        'paperQuestions': [
+            {
+                'question': 'What American state did the authors of this paper complete this paper in?',
+                'answer': 'texas'
+            },
+            {
+                'question': 'What is the name of the efficient heuristic presented for inferring a phylogenetic network from a collection of gene trees?',
+                'answer': 'murpar'
+            },
+            {
+                'question': 'What does HGT stand for?',
+                'answer': 'horizontal gene transfer'
+            },
+            {
+                'question': 'Huson and Rupp (2008) roposed a method for summarizing a collection of gene trees using what?',
+                'answer': 'cluster networks'
+            },
+            {
+                'question': 'What is the name of the tool that the authors used to generate 30-taxon data sets?',
+                'answer': 'phyl-o-gen'
             },
         ]
     }
