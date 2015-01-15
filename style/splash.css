@@ -50,6 +50,7 @@
 .feedback-container {
     position: absolute;
     top: 55%;
+    width: 100%;
 }
 
 .feedback-container h2 {
